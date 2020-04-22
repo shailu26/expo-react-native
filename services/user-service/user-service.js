@@ -14,10 +14,10 @@ export default class UserService {
         });
     }
 
-    updatePassword(body) {
+    updatePassword(data) {
         return axios(`${environment.baseUrl}/api/user/updatePassword`, {
             method: "POST",
-            body
+            body: data
         });
     }
 
