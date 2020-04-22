@@ -334,7 +334,7 @@ export class UploadVideo extends Component {
           </Portal>
         </View>
 
-        <TouchableHighlight onPress={this.upload} style={styles.uploadBtn}>
+        <TouchableHighlight onPress={this.upload} style={{flex: 1, alignItems: 'center'}}>
           <Button
             style={styles.uploadBtn}
             mode="contained"

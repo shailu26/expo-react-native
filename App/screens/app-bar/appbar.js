@@ -19,7 +19,7 @@ export default class AppBar extends Component {
         return (
             <Appbar.Header>
                 <Appbar.BackAction
-                    onPress={this._goBack}
+                    onPress={() => console.log('ok')}
                 />
                 <Appbar.Content
                     title={title}

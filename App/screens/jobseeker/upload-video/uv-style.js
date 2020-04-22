@@ -17,7 +17,6 @@ const styles = StyleSheet.create({
         margin: 15,
         width: Dimensions.get('window').width/2,
         alignItems: 'center',
-        marginLeft: '26%'
     },
     selectedVidBox: {
         flexDirection: 'row',
