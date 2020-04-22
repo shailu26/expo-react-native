@@ -17,7 +17,7 @@ export default class UserService {
     updatePassword(data) {
         return axios(`${environment.baseUrl}/api/user/updatePassword`, {
             method: "POST",
-            body: data
+            data
         });
     }
 

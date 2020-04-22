@@ -52,17 +52,14 @@ export class ChangePassword extends Component {
   };
 
   updatePassword() {
-    console.log(this.state.loading, "state");
-    this._userApi.updatePassword(JSON.stringify({
+    this._userApi.updatePassword({
         userId: this.state.userId,
         confirmPassword: this.state.confirmPassword,
         password: this.state.currentPassword,
         email: this.state.email
-      })).then((response) => response.json())
+      }).then((response) => response.json())
       .then((json) => {
-        console.log(json)
         if (json.success) {
-          console.log(json.success);
           this.setState({showToastMessage: 'Password Updated Successfully'})
           this.props.navigation.navigate('HomeApp');
         } else {
