@@ -10,7 +10,8 @@ import {
   Home,
   Details,
   Search2,
-  Splash
+  Splash,
+  SignOutComponent
 } from "./screens/Screens";
 import Login from './screens/login/login'
 import { Ionicons } from '@expo/vector-icons';
@@ -71,6 +72,7 @@ const DrawerScreen = () => (
   <Drawer.Navigator initialRouteName="Profile">
     <Drawer.Screen name="Profile" component={TabsScreen} />
     <Drawer.Screen name="Change Password" component={ChangePassword} />
+    <Drawer.Screen name="Sign Out" component = {SignOutComponent}/>
   </Drawer.Navigator>
 );
 

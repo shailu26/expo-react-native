@@ -112,3 +112,15 @@ export const CreateAccount = () => {
     </ScreenContainer>
   );
 };
+
+export const SignOutComponent = () => {
+  const {signOut} = React.useContext(AuthContext);
+  async function signingOut() {
+    await AsyncStorage.clear();
+    signOut();
+  }
+  signingOut();
+  return <ScreenContainer>
+      <Text>Signing Out</Text>
+    </ScreenContainer>
+}
