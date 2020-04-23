@@ -20,7 +20,7 @@ import { UploadVideo } from './screens/jobseeker/upload-video/upload-video';
 import { Provider as PaperProvider } from "react-native-paper";
 import {ChangePassword} from './screens/jobseeker/change-password/change-password';
 import {UserProfileDetail } from './screens/jobseeker/user-profile/user-profile';
-import {socketConnection} from '../services/socket/socket;'
+import {socketConnection} from '../services/socket/socket'
 
 const AuthStack = createStackNavigator();
 const AuthStackScreen = () => (
