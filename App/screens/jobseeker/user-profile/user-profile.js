@@ -78,16 +78,18 @@ export class UserProfileDetail extends Component {
             // </View>
             <View style={styles.container}>
                 <AppBar title="Shailesh" navigation={navigation}/>
-                <View style={styles.header}></View>
-                <Avatar.Image style={styles.avatar} size={125} source={require('../../../../assets/avatar.png')}/>
-                <View style={styles.body}>
-                    <View style={styles.bodyContent}>
-                        <Text style={styles.name}>Shailesh Gehlot</Text>
-                        <Text style={styles.info}>UX Designer / Mobile developer</Text>
-                        <Text style={styles.description}>Lorem ipsum dolor sit amet, saepe sapientem eu nam. Qui ne assum electram expetendis, omittam deseruisse consequuntur ius an,</Text>
-              
+                <ScrollView>
+                    <View style={styles.header}></View>
+                    <Avatar.Image style={styles.avatar} size={125} source={require('../../../../assets/avatar.png')}/>
+                    <View style={styles.body}>
+                        <View style={styles.bodyContent}>
+                            <Text style={styles.name}>Shailesh Gehlot</Text>
+                            <Text style={styles.info}>UX Designer / Mobile developer</Text>
+                            <Text style={styles.description}>Lorem ipsum dolor sit amet, saepe sapientem eu nam. Qui ne assum electram expetendis, omittam deseruisse consequuntur ius an,</Text>
+                
+                        </View>
                     </View>
-                </View>
+                </ScrollView>
             </View>
         )
     }

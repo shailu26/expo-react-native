@@ -41,34 +41,32 @@ export default class Login extends React.Component {
     }
 
     handleLogin = async () => {
-        // this
-        //     ._userApi
-        //     .login({email: this.state.email, password: this.state.password})
-        //     .then(async({data}) => {
-        //         try {
-        //             for (let key in data.result) {
-        //                 await AsyncStorage.setItem(key, data.result[key]);
-        //             }
-        //             await AsyncStorage.setItem("token", data.token);
-        //             this.context.signIn(data.token);
-        //         } catch (e) {
-        //             console.log({e});
-        //         }
-        //     })
-        //     .catch((err) => {
-        //         if (err && err.response && err.response.data) {
-        //             let error = err.response.data;
-        //             if (error.status === 401 || error.status === 404) {
-        //                 this.setState({error: error.errorMessage});
-        //             } else {
-        //                 this.setState({error: "Login Failed"});
-        //             }
-        //         } else {
-        //             this.setState({error: "Login Failed"});
-        //         }
-        //     });
-        await AsyncStorage.setItem("token", 'abc');
-        this.context.signIn('abc')
+        this
+            ._userApi
+            .login({email: this.state.email, password: this.state.password})
+            .then(async({data}) => {
+                try {
+                    for (let key in data.result) {
+                        await AsyncStorage.setItem(key, data.result[key]);
+                    }
+                    await AsyncStorage.setItem("token", data.token);
+                    this.context.signIn(data.token);
+                } catch (e) {
+                    console.log({e});
+                }
+            })
+            .catch((err) => {
+                if (err && err.response && err.response.data) {
+                    let error = err.response.data;
+                    if (error.status === 401 || error.status === 404) {
+                        this.setState({error: error.errorMessage});
+                    } else {
+                        this.setState({error: "Login Failed"});
+                    }
+                } else {
+                    this.setState({error: "Login Failed"});
+                }
+            });
     };
 
     _onDismissSnackBar = () => {
